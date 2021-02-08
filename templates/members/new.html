@@ -4,6 +4,23 @@
 <h1>Add a Member</h1>
 
 <form action="/members" method="post">
+
+    <label for="member_name">Name</label>
+    <input type="text" name="member_name" id="name">
+
+    <label for="member_age">Age</label>
+    <input type="text" name="member_age" id="age">
+
+    <label for="member_type">Type</label>
+    <input type="text" name="member_type" id="type">
+    
+    <input type="submit" value="Add Member">
+  </form>
+
+
+
+
+<!-- <form action="/members" method="post">
   <label for="member">Name:</label>
   <textarea name="member" id="member" cols="3" rows="1"></textarea>
   <input class="btn btn--action" type='submit' value="Member">
@@ -16,4 +33,4 @@
   <label for="type">Type</label>
   <textarea name="type" id="type" cols="3" rows="1"></textarea>
   <input class="btn btn--action" type='submit' value="Type">
-</form>
+</form> -->

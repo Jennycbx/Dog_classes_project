@@ -37,7 +37,7 @@ def delete_all():
 
 def update(session):
     sql = "UPDATE sessions SET (name, duration, type) = (%s, %s, %s) WHERE id = %s"
-    values = [session.name, session.duration, session.type member.id]
+    values = [session.name, session.duration, session.type, member.id]
     run_sql(sql, values)
 
 def members(session):
