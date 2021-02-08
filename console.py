@@ -35,17 +35,23 @@ session_repository.save(session3)
 session4 = Session('Scent work', 60, 'Hound')
 session_repository.save(session4)
 
-booking1 = Booking(member1, session4, 'Had a great time harnessing his natural ability.')
+booking1 = Booking(member1, session4)
 booking_repository.save(booking1)
 
-booking2 = Booking(member4, session3, 'He was knackered at the end but had lots of fun!')
+booking2 = Booking(member4, session3)
 booking_repository.save(booking2)
 
-booking3 = Booking(member3, session2, 'Felt like the other owners were getting impatient waiting for my old girl. Should do senior agility.')
+booking3 = Booking(member3, session2)
 booking_repository.save(booking3)
 
-booking4 = Booking(member2, session1, 'Cooper found it hard to focus with all the other dogs but it will be something to work on.')
+booking4 = Booking(member2, session1)
 booking_repository.save(booking4)
 
 
 pdb.set_trace()
+
+
+# , 'Had a great time harnessing his natural ability.'
+# , 'He was knackered at the end but had lots of fun!'
+# , 'Felt like the other owners were getting impatient waiting for my old girl. Should do senior agility.'
+# , 'Cooper found it hard to focus with all the other dogs but it will be something to work on.'

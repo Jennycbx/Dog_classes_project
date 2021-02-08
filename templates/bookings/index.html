@@ -7,7 +7,6 @@
   {% for booking in bookings %}
   <li>
   <p>{{ booking.member.name }} - {{ booking.session.name }} </p>
-  <p>"<i>{{booking.review}}</i>"</p>
     <p>
       <form action="/bookings/{{ booking.id }}/delete" method="POST">
         <input class="btn btn--danger" type="submit" value="delete" />
