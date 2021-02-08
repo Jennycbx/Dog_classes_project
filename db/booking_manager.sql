@@ -4,8 +4,8 @@ DROP TABLE sessions;
 
 CREATE TABLE members (
     id SERIAL PRIMARY KEY,
-    name VARCHAR(255)
-    age INT
+    name VARCHAR(255),
+    age INT,
     type VARCHAR(255)
 );
 
@@ -21,4 +21,4 @@ CREATE TABLE bookings (
     member_id INT REFERENCES members(id) ON DELETE CASCADE,
     session_id INT REFERENCES sessions(id) ON DELETE CASCADE,
     review TEXT
-)
+);
