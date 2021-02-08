@@ -4,4 +4,22 @@
 <h1>Paws in the Park</h1>
 
 <p>A variety of classes to suit your and your pup's needs!</p>
+
+<p class="btn--wrapper">
+    <a class="btn btn--action" href="/bookings/new">Reviews</a>
+  </p>
+  
+  <ul>
+    {% for booking in bookings %}
+    <li>
+    <p>{{ booking.member.name }} - {{ booking.session.name }} </p>
+    <p>"<i>{{booking.review}}</i>"</p>
+      <p>
+        <form action="/bookings/{{ booking.id }}/delete" method="POST">
+          <input class="btn btn--danger" type="submit" value="delete" />
+        </form>
+      </p>
+    </li>
+    {% endfor %}
+  </ul>
 {% endblock %}
