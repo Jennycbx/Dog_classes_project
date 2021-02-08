@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1> {{session.name}} </h1>
+
+<p>Duration: {{ session.duration }}</p>
+<p>Type: {{ session.type }}</p>
+
+<h3>Attended by:</h3>
+
+<ul>
+    {% for member in members %}
+    <li>{{ member.name }}</li>
+        
+    {% endfor %}
+</ul>
+
+
+{% endblock %}

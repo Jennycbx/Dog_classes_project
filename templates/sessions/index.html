@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Sessions</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th></th>
+    <th>Duration</th>
+    <th></th>
+    <th>Type</th>
+  </tr>
+  {% for location in locations %}
+  <tr>
+    <td><a href="/sessions/{{ session.id }}"> {{session.name}} </a></td>
+    <td>|</td>
+    <td>{{ session.duration }}</td>
+    <td>|</td>
+    <td>{{ session.type }}</td>
+  </tr>
+  {% endfor %}
+</table>
+{% endblock %}
