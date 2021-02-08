@@ -26,7 +26,7 @@ def select(id):
     result = run_sql(sql, values)[0]
 
     if result is not None:
-        member = Member(result['name'], result['age'], result['type'] result['id'])
+        member = Member(result['name'], result['age'], result['type'], result['id'])
     return member
 
 
