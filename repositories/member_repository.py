@@ -34,7 +34,12 @@ def delete_all():
     sql = "DELETE FROM members"
     run_sql(sql)
 
-def sessions(user):
+def update(member):
+    sql = "UPDATE members SET (name, age, type) = (%s, %s, %s) WHERE id = %s"
+    values = [member.name, member.age, member.type member.id]
+    run_sql(sql, values)
+
+def sessions(member):
     sessions = []
 
     sql = "SELECT sessions.* FROM sessions INNER JOIN bookings ON bookings.session_id = sessions.id WHERE member_id = %s"

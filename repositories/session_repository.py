@@ -35,6 +35,11 @@ def delete_all():
     sql = "DELETE FROM sessions"
     run_sql(sql)
 
+def update(session):
+    sql = "UPDATE sessions SET (name, duration, type) = (%s, %s, %s) WHERE id = %s"
+    values = [session.name, session.duration, session.type member.id]
+    run_sql(sql, values)
+
 def members(session):
     members = []
 

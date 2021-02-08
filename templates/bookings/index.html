@@ -3,10 +3,6 @@
 {% block content %}
 <h1>Bookings</h1>
 
-<p class="btn--wrapper">
-  <a class="btn btn--action" href="/bookings/new">New booking</a>
-</p>
-
 <ul>
   {% for booking in bookings %}
   <li>
@@ -20,6 +16,10 @@
   </li>
   {% endfor %}
 </ul>
+
+<p class="btn--wrapper">
+  <a class="btn btn--action" href="/bookings/new">New booking</a>
+</p>
 
 
 {% endblock %}
