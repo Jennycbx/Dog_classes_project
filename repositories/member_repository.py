@@ -16,35 +16,35 @@ def select_all():
     sql = "SELECT * FROM members"
     results = run_sql(sql)
     for row in results:
-        member = Member(row['name'], row[age], row[type], row['id'])
+        member = Member(row['name'], row['age'], row['type'], row['id'])
         members.append(member)
     return members
 
 
-# def select(id):
-#     user = None
-#     sql = "SELECT * FROM users WHERE id = %s"
-#     values = [id]
-#     result = run_sql(sql, values)[0]
+def select(id):
+    member = None
+    sql = "SELECT * FROM members WHERE id = %s"
+    values = [id]
+    result = run_sql(sql, values)[0]
 
-#     if result is not None:
-#         user = User(result['name'], result['id'] )
-#     return user
+    if result is not None:
+        member = Member(result['name'], result['age'], result['type'] result['id'])
+    return member
 
 
 def delete_all():
     sql = "DELETE FROM members"
     run_sql(sql)
 
-# def locations(user):
-#     locations = []
+def sessions(user):
+    sessions = []
 
-#     sql = "SELECT locations.* FROM locations INNER JOIN visits ON visits.location_id = locations.id WHERE user_id = %s"
-#     values = [user.id]
-#     results = run_sql(sql, values)
+    sql = "SELECT sessions.* FROM sessions INNER JOIN bookings ON bookings.session_id = sessions.id WHERE member_id = %s"
+    values = [member.id]
+    results = run_sql(sql, values)
 
-#     for row in results:
-#         location = Location(row['name'], row ['category'], row['id'])
-#         locations.append(location)
+    for row in results:
+        session = Session(row['name'], row['duration'], row['type'], row['id'])
+        sessions.append(session)
 
-#     return locations
+    return sessions
