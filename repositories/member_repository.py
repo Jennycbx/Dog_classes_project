@@ -9,7 +9,6 @@ def save(member):
     member.id = results[0]['id']
     return member
 
-
 def select_all():
     members = []
 
@@ -19,7 +18,6 @@ def select_all():
         member = Member(row['name'], row['age'], row['type'], row['id'])
         members.append(member)
     return members
-
 
 def select(id):
     member = None
