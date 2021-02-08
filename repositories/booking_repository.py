@@ -5,10 +5,10 @@ import repositories.session_repository as session_repository
 
 def save(booking):
     sql = "INSERT INTO bookings (member_id, session_id, review) VALUES ( %s, %s, %s ) RETURNING id"
-    values = [booking.member.id, booking.session.id, visit.review]
-    results = run_sql( sql, values )
-    visit.id = results[0]['id']
-    return visit
+    values = [booking.member.id, booking.session.id, booking.review]
+    results = run_sql(sql, values)
+    booking.id = results[0]['id']
+    return booking
 
 def select_all():
     bookings = []

@@ -3,10 +3,10 @@ from models.session import Session
 from models.member import Member
 
 def save(member):
-    sql = "INSERT INTO members (name, age, type) VALUES (%s, %s, %s) RETURNING *"
-    values = [user.name]
-    results = run_sql( sql, values )
-    user.id = results[0]['id']
+    sql = "INSERT INTO members (name, age, type) VALUES (%s, %s, %s) RETURNING id"
+    values = [member.name, member.age, member.type]
+    results = run_sql(sql, values)
+    member.id = results[0]['id']
     return member
 
 
