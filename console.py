@@ -7,6 +7,10 @@ import repositories.member_repository as member_repository
 import repositories.session_repository as session_repository
 import repositories.booking_repository as booking_repository
 
+booking_repository.delete_all()
+session_repository.delete_all()
+member_repository.delete_all()
+
 member1 = Member('Charlie', 8, 'Hound')
 member_repository.save(member1)
 
