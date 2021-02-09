@@ -13,7 +13,7 @@ def sessions():
 @sessions_blueprint.route("/sessions/<id>")
 def show(id):
     session = session_repository.select(id)
-    members = session_repository.members(session)
+    members = session_repository.members(id)
     return render_template("sessions/show.html", session=session, members=members)
 
 @sessions_blueprint.route("/sessions/new", methods=['GET'])

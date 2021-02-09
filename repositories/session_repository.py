@@ -42,18 +42,18 @@ def delete(id):
 
 def update(session):
     sql = "UPDATE sessions SET (name, day, duration, type) = (%s, %s, %s, %s) WHERE id = %s"
-    values = [session.name, session.day, session.duration, session.type, session.id]
+    values = [session.name, session.day, session.duration, session.type]
     run_sql(sql, values)
 
-def members(session):
+def members(id):
     members = []
 
-    sql = "SELECT members.* FROM members INNER JOIN bookings ON bookings.member_id = members.id WHERE session_id = %s"
-    values = [session.id]
+    sql = "SELECT members.* FROM members INNER JOIN bookings ON bookings.member_id = members.id WHERE bookings.session_id = %s"
+    values = [id]
     results = run_sql(sql, values)
 
     for row in results:
-        member = Member(row['name'], row,['age'], row['type'], row['id'])
+        member = Member(row['name'], row,['age'], row['type'])
         members.append(member)
 
     return members
