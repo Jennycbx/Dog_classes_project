@@ -30,7 +30,7 @@ def show(id):
     sessions = member_repository.sessions(member)
     return render_template("members/show.html", member=member, sessions=sessions)
 
-@members_blueprint.route("/bookings/<id>/delete", methods=['POST'])
+@members_blueprint.route("/members/<id>/delete", methods=['POST'])
 def delete_member(id):
     member_repository.delete(id)
     return redirect('/members')
