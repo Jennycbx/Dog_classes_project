@@ -1,3 +1,31 @@
 body {
     background-color: cadetblue;
+    color: indigo;
 }
+
+header {
+    background-color: indigo;
+    color: cadetblue;
+    text-align: center;
+}
+
+nav > ul {
+    text-align: center;
+    list-style: none;
+    display: flex;
+    text-overflow: wrap;
+
+}
+
+nav > ul > li {
+    text-transform: uppercase;
+    padding: 15px
+  }
+
+h1 {
+    text-align: center;
+}
+aside > p {
+    
+}
+
