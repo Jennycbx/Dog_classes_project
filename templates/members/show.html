@@ -5,11 +5,11 @@
 
 <p>{{ member.age }} years old</p>
 <p>{{ member.type }}</p>
-<p>Attended:</p>
+<p>Attending:</p>
 
 <ul>
     {% for session in sessions %}
-        <li>{{ session.name }}</li>
+        <li>{{ session.name }} on {{ session.day }}</li>
     {% endfor %}
 </ul>
 

@@ -4,7 +4,7 @@
 <h1>Members</h1>
 
 <p class="btn--wrapper">
-  <a class="btn btn--action" href="/members/new">New member</a>
+  <a class="btn btn--action" href="/members/new">Add new member</a>
 </p>
 
   {% for member in members %}
@@ -14,7 +14,8 @@
       <input class="btn btn--danger" type="submit" value="delete" />
       </form>
     </p>
+  <p><a href="/members/{{member.id}}/edit">Edit</a></p>
   
   {% endfor %}
-</table>
+
 {% endblock %}

@@ -6,7 +6,7 @@
 <ul>
   {% for booking in bookings %}
   <li>
-  <p>{{ booking.member.name }} - {{ booking.session.name }} </p>
+  <p>{{ booking.member.name }} - {{ booking.session.name }} - {{booking.session.day}}</p>
     <p>
       <form action="/bookings/{{ booking.id }}/delete" method="POST">
         <input class="btn btn--danger" type="submit" value="delete" />
@@ -17,7 +17,7 @@
 </ul>
 
 <p class="btn--wrapper">
-  <a class="btn btn--action" href="/bookings/new">New booking</a>
+  <a class="btn btn--action" href="/bookings/new">Add new booking</a>
 </p>
 
 

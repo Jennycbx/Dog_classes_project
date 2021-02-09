@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Add new session</h1>
+
+<form action="/sessions" method="post">
+
+    <label for="session_name">Name</label>
+    <input type="text" name="session_name" id="name">
+
+    <label for="session_day">Day</label>
+    <input type="text" name="session_day" id="day">
+
+    <label for="session_duration">Duration</label>
+    <input type="text" name="session_duration" id="age">
+
+    <label for="session_type">Type</label>
+    <input type="text" name="session_type" id="type">
+    
+    <input type="submit" value="Add Session">
+  </form>
+
+  {% endblock %}

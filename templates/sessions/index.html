@@ -3,23 +3,18 @@
 {% block content %}
 <h1>Sessions</h1>
 
-<table>
-  <tr>
-    <th>Name</th>
-    <th></th>
-    <th>Duration</th>
-    <th></th>
-    <th>Type</th>
-  </tr>
   {% for session in sessions %}
-  <tr>
-    <td><a href="/sessions/{{ session.id }}"> {{session.name}} </a></td>
-    <td>|</td>
-    <td>{{ session.duration }}</td>
-    <td>|</td>
-    <td>{{ session.type }}</td>
-  </tr>
+  <p><a href="/sessions/{{ session.id }}"> {{session.name}} </a></p>
+    <p>
+      <form action="/sessions/{{ session.id }}/delete" method="POST">
+      <input class="btn btn--danger" type="submit" value="delete" />
+      </form>
+    </p>
+  <p><a href="/sessions/{{session.id}}/edit">Edit</a></p>
   {% endfor %}
-</table>
 
+
+<p class="btn--wrapper">
+  <a class="btn btn--action" href="/sessions/new">New session</a>
+</p>
 {% endblock %}

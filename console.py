@@ -23,16 +23,16 @@ member_repository.save(member3)
 member4 = Member('Archie', 1, 'Retriever')
 member_repository.save(member4)
 
-session1 = Session('Obedience', 30, 'All')
+session1 = Session('Obedience', 'Monday 26th', 30, 'All')
 session_repository.save(session1)
 
-session2 = Session('Agility', 60, 'All')
+session2 = Session('Agility', 'Tuesday 27th', 60, 'All')
 session_repository.save(session2)
 
-session3 = Session('Puppy', 30, 'All')
+session3 = Session('Puppy', 'Wednesday 28th', 30, 'All')
 session_repository.save(session3)
 
-session4 = Session('Scent work', 60, 'Hound')
+session4 = Session('Scent work', 'Thursday 29th', 60, 'Hound')
 session_repository.save(session4)
 
 booking1 = Booking(member1, session4)
@@ -51,7 +51,3 @@ booking_repository.save(booking4)
 pdb.set_trace()
 
 
-# , 'Had a great time harnessing his natural ability.'
-# , 'He was knackered at the end but had lots of fun!'
-# , 'Felt like the other owners were getting impatient waiting for my old girl. Should do senior agility.'
-# , 'Cooper found it hard to focus with all the other dogs but it will be something to work on.'
