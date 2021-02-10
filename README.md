@@ -1,19 +1,27 @@
-Welcome to my Dog Training Classes app!
+# Dog Training Classes app
 In order to run the app, first create the database:
 
-<!-- createdb booking_manager -->
+```
+createdb booking_manager
+```
 
 Then we need to run our psql command to access our sql file and create the tables:
 
-<!-- psql -d booking_manager -f db/booking_manager.sql -->
+```
+psql -d booking_manager -f db/booking_manager.sql
+```
 
 Finally we need to run the console in order to input our data:
 
-<!-- python3 console.py -->
+```
+python3 console.py
+```
 
 To access the website, quit out of python in the terminal and run flask:
 
-<!-- flask run -->
+```
+flask run
+```
 
 Cmd + click on the link provided.
 

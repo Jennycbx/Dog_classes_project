@@ -42,7 +42,7 @@ def delete(id):
 
 def update(session):
     sql = "UPDATE sessions SET (name, day, duration, type) = (%s, %s, %s, %s) WHERE id = %s"
-    values = [session.name, session.day, session.duration, session.type]
+    values = [session.name, session.day, session.duration, session.type, session.id]
     run_sql(sql, values)
 
 def members(id):

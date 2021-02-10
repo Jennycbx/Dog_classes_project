@@ -3,13 +3,15 @@
 {% block content %}
 <h2>Sessions</h2>
 
+<p class="btn--wrapper">
+  <a class="btn btn--action" href="/sessions/new">New session</a>
+</p>
+
   {% for session in sessions %}
   <p><a href="/sessions/{{ session.id }}"> {{session.name}} </a></p>
     
   {% endfor %}
 
 
-<p class="btn--wrapper">
-  <a class="btn btn--action" href="/sessions/new">New session</a>
-</p>
+
 {% endblock %}
