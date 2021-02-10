@@ -25,7 +25,20 @@ nav > ul > li {
 h1 {
     text-align: center;
 }
-aside > p {
-    
+
+footer > ul {
+    text-align: center;
+    list-style: none;
+    display: flex;
+    text-overflow: wrap;
 }
 
+footer {
+    background-color: indigo;
+    color: cadetblue;
+    text-align: center;
+}
+
+footer > ul > li {
+    padding: 15px
+}
