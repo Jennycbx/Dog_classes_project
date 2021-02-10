@@ -15,6 +15,13 @@
     {% endfor %}
 </ul>
 
-<p><a href="/sessions/{{session.id}}/edit">Edit</a></p>
+<p>
+    <button><a href="/sessions/{{session.id}}/edit">Edit</a></button>
+</p> 
+<p>
+    <form action="/sessions/{{ session.id }}/delete" method="POST">
+    <input class="btn btn--danger" type="submit" value="Delete" />
+    </form>
+</p>
 
 {% endblock %}

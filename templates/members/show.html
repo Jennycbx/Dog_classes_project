@@ -12,6 +12,12 @@
         <li>{{ session.name }} on {{ session.day }}</li>
     {% endfor %}
 </ul>
-<p><a href="/members/{{member.id}}/edit">Edit</a></p>
-
+<p>
+   <button><a href="/members/{{member.id}}/edit">Edit</a></button> 
+</p>
+<p>
+    <form action="/members/{{ member.id }}/delete" method="POST">
+    <input class="btn btn--danger" type="submit" value="Delete" />
+    </form>
+  </p>
 {% endblock %}
